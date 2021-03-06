@@ -20,3 +20,42 @@ inline > tag style > tag link
 considerados.
 
 0. Universal selector, combinators e negation pseudo-class (:not())
+1. Element type selector e pseudo-elements (::before, ::after)
+10. Classes e attribute selectors ([type="radio"])
+100. ID selector
+1000. Inline
+
+### A regra !important
+
+* cuidado, evie o uso
+* não é considerado uma boa prática
+* quebra o fluxo natural da cascata
+
+<!--
+HTML:
+
+<h1 class="title" id="my-title">Título <strong>alo</strong> </h1>
+<p >paragrafo</p>
+
+CSS:
+
+#my-title,
+#my-title strong{
+  color: gray;
+}
+
+.title{
+  color: red;
+}
+
+h1{
+  /*Sobrescreve - coloca por cima de outra cor*/
+ color: blue !important;
+}
+
+*{
+  color: green;
+}
+
+
+-->
