@@ -35,3 +35,19 @@ console.log(name.surName, age)
 
 let date = new Date('2020-12-01')
 console.log(date.__proto__)
+
+
+/*
+    Operadores unários
+    typeof
+    delete
+*/
+const person = {
+    name: 'Mayk', 
+    age: 25,
+}
+
+delete person.age
+console.log(person)
+
+console.log(typeof "mayk")
