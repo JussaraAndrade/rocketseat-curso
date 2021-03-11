@@ -121,6 +121,22 @@ x **=2
 console.log(x)
 
 
+//Operadores lógicos (logical operators)
+
+// - 2 valores booleanos, quando verificados,
+// resultará em verdadeiro ou falso
+
+let pao = true
+let queijo = true
+
+// AND &&
+console.log(pao && queijo)// Dois valores tem que ser true, caso nenhum dos dois seja true o resutlado será falso
+
+// OR ||
+console.log(pao || queijo)// Qualquer um que for verdadeiro sempre da true, quando os dois for falso o resultado será falso.
+
+// NOT ! - negar ele acaba trocando de valor 
+console.log(!pao)// o pão era true, e o valor tá sendo trocado para false.
 
 
 
