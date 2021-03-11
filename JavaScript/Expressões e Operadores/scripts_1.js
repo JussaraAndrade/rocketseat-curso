@@ -32,3 +32,17 @@ console.log(decrement)
 // exponencial **
 console.log(3 ** 2)
 
+//Grouping operator ( )
+
+//Primeiro soma 3 * 5, depois + 2: 15 + 2 = 17
+let total_1 = 2 + 3 * 5
+console.log(total_1)
+
+//Trocar ordem de precedência: Primeiro soma (2 + 3), depois * 5: 5 * 5 = 25
+let total_2 = (2 + 3) * 5
+console.log(total_2) 
+
+
+
+
+
