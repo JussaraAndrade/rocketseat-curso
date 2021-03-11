@@ -47,3 +47,27 @@ console.log("false" ? 'verdadeiro' : 'falso')
 console.log(-1 ? 'verdadeiro' : 'falso')
 console.log(Infinity ? 'verdadeiro' : 'falso')
 console.log(- Infinity ? 'verdadeiro' : 'falso')
+
+
+/* Operator precedence
+    Precedência de operadores
+
+* grouping                    ( )
+* negação e incremento        ! ++ --
+* multiplicação e divisão     * /
+* adição e subtração          + -
+* relacional                  < <= > >=
+* igualdade                   == != === !==
+* AND                         &&
+* OR                          ||
+* condicional                 ?:
+* assignment (atribuição)     = += -= *=
+*/
+
+//Primeiro mutiplica, e depois soma: 5 * 10 = 50 + 2 = 52
+console.log(2 + 5 * 10)
+
+//Primeiro soma, e depois multiplica: 2 + 5 = 7 * 10 = 70
+console.log((2 + 5) * 10)
+
+console.log(3 > 2 && 2 > 1)
