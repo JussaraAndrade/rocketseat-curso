@@ -75,3 +75,26 @@ console.log(calculate(4, '-', 8))
 console.log(calculate(4, '*', 8))
 console.log(calculate(4, '/', 8))
 console.log(calculate(4, '%', 8))
+
+
+//throw - disparar/lançar
+
+function sayMyName(name = ''){
+    if(name === ''){
+        //throw new Error("Nome é necessário")
+        throw 'Nome é obrigatório'
+    }
+    console.log(name)
+}
+
+//try(tentar)...catch(pegar)
+
+try{
+    sayMyName('Mayk')
+}catch(e){
+    console.log(e)
+}
+
+console.log('após ao try/catch')
+
+
