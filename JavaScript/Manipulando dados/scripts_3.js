@@ -31,3 +31,6 @@ console.log(myArray_1)
 
 let myArray_2 = new Array(10)
 console.log(myArray_2)
+
+//Contar elementos de um array
+console.log(["a", "b", "c"].length)
