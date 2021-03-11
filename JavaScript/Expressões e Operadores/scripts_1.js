@@ -161,5 +161,22 @@ const canDrive = age >= 18 ? 'can drive' : "can't drive"
 console.log(canDrive)
 
 
+//Operador de String (String operator)
+
+//comparison (comparação)
+console.log('a' == 'b')// false
+console.log('a' == 'a')// true
+
+//concatenation (concatenação)
+//Retorna a união de duas Strings
+let alpha = 'alpha'
+console.log(alpha + 'bet' + 's')
+console.log(alpha += 'bet')
+
+alpha += 'bet'
+console.log(alpha + 345)
+
+
+
 
 
