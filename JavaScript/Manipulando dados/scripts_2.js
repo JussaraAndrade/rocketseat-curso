@@ -13,3 +13,8 @@ console.log(word.length)
 
 let number_2 = 1234
 console.log(String(number_2).length)
+
+//Transformar um número quebrado com 2 casas deciamis e trocar ponto por vírgula
+let number_3 = 654.6546543
+//Troca o ponto por vírgula
+console.log(number_3.toFixed(2).replace(".", ","))
