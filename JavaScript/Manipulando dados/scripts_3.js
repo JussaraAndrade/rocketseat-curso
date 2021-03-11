@@ -20,3 +20,14 @@ let myArray = phrase_1.split(" ")
 let phraseWithUnderscore = myArray.join("_")
 console.log(myArray)
 console.log(phraseWithUnderscore.toLowerCase())
+
+
+
+//Manipulando Arrays
+
+//Criar Array com construtor
+let myArray_1 = new Array('a', 'b', 'c')
+console.log(myArray_1)
+
+let myArray_2 = new Array(10)
+console.log(myArray_2)
