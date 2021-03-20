@@ -1,8 +1,9 @@
-//Manipulando conteúdo
-// textContent
+// Manipulando conteúdo
+// innerText
 
 const element = document.querySelector('h1')
 
-element.textContent += " Olá Devs!"
+element.innerHTML = " Olá Devs!"
 
 console.log(element.textContent)
+
