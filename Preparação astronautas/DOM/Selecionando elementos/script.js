@@ -1,4 +1,4 @@
-//getElementByClassName()
+//getElementByTagName()
 
-const element = document.getElementsByClassName('one');
+const element = document.getElementsByTagName('h1');
 console.log(element)
