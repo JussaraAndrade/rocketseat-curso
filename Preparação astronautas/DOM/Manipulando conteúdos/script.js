@@ -1,6 +1,7 @@
 // Manipulando conteúdo
-// innerHTML
+// value
 
-const element = document.querySelector('h1')
+const element = document.querySelector('input')
 
-element.innerHTML = " Olá Devs! <small>!!!</small>"
+console.log(element.value)
+element.value = "Outro valor"
