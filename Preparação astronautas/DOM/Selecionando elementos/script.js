@@ -1,6 +1,4 @@
-// getElementById()
+//getElementByClassName()
 
-const element = document.getElementById
-('blog-title')
-
+const element = document.getElementsByClassName('one');
 console.log(element)
