@@ -1,12 +1,11 @@
-// Criando e adicionando elementos
+// Adicionando elementos
 
-// createElement
 const div = document.createElement('div');
 div.innerHTML = "Olá Devs!"
 
-//append prepend
+// insertBefore - não existe insertAfter
 const body = document.querySelector('body')
-//body.append(div)
+const header = body.querySelector('header')
 
-//prepend - adiciona antes
-body.prepend(div)
+// Alternativa para simular insertAfter
+body.insertBefore(div, header.nextSibling)
