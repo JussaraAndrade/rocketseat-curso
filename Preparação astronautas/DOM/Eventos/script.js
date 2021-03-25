@@ -1,7 +1,9 @@
 // Eventos
-const input = document.querySelector('input')
+const h1 = document.querySelector('h1');
 
-// Teclado: onkeyup, onkeydown, etc.
-input.onkeypress = function(){
-    console.log('rodei')
+//Ouvidor de eventos (click)
+h1.addEventListener('mouseover', print)
+
+function print(){
+    console.log('print')
 }
