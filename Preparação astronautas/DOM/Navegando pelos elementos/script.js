@@ -1,16 +1,11 @@
 // Navegando pelos elementos
-// childNodes children
 
-const el = document.querySelector('body')
+const el = document.querySelector('body script')
 
-// firstChild - considera o espaço vazio
-console.log(el.firstChild)
+// nextSibling nextElementSibling (Sibling; irmãos)
+console.log(el.nextSibling)
+console.log(el.nextElementSibling)
 
-//firstElementChild - não vai considerar o espaços vazios
-console.log(el.firstElementChild)
-
-// lastChild 
-console.log(el.lastChild)
-
-// lastElementChild
-console.log(el.lastElementChild)
+// previousSibling previousElementSibling
+console.log(el.previousSibling)
+console.log(el.previousElementSibling)
