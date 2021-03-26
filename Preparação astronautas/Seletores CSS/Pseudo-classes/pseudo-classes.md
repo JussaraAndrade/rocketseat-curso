@@ -8,3 +8,9 @@ mouse em cima dele.
 Pseudo-classes começam com 2 pontos seguido do nome da pseudo class
 `:pseudo-class-name`
 
+## Selecionando elementos com pseudo-classes
+
+* :first-child
+* :nth-of-type()
+* :nth-child()
+* :nth-child-odd-even
