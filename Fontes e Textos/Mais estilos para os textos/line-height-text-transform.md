@@ -2,6 +2,7 @@
 
 * Espaços entre linhas
 * Pode ser com unidades ou sem unidades de medida
+* Comuns: 1.5 ou 2
 
 ```css
     p {
