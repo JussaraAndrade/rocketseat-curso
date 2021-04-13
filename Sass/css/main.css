@@ -1,29 +1,12 @@
-@charset "UTF-8";
-/* 
- _base.scss - "_" significa que tá pedindo para o Sass não compilar,
- só será compilado se importar dentro do main.scss
-*/
-body {
-  background-color: #7159c1;
-  color: orange;
-}
-
-/*Encadeamento*/
-.container {
-  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-          box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-  width: 200px;
-  height: 200px;
-  background-color: white;
-}
-
-.container p {
-  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-          box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-  background-color: gray;
-  height: 100px;
-  width: 100px;
+.blue-text {
   color: blue;
+}
+
+.red-text {
   color: red;
+}
+
+.yellow-text {
+  color: yellow;
 }
 /*# sourceMappingURL=main.css.map */

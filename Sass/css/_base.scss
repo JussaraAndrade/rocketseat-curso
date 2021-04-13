@@ -1,45 +1,17 @@
-/* 
- _base.scss - "_" significa que tá pedindo para o Sass não compilar,
- só será compilado se importar dentro do main.scss
-*/
+// @for $i from 1 through 5 {
+//     .text-#{$i} {
+//         font-size: 15px * $i
+//     }
+// }
 
-$text-color: orange;
+// @for $i from 1 to 5 {
+//     .text-#{$i}{
+//         font-size: 15px * $i
+//     }
+// }
 
-@mixin box-shadow($color) {
-    box-shadow: 3px 3px 4px 1px $color;
-}
+//$colors: (blue, red, yellow);
 
-@mixin text-effect($val) {
-    @if $val = danger {
-        color: red;
-    }
-    @else if $val = alert {
-        color: yellow;
-    }
-    @else {
-        color: black;
-    }
-   
-}
-
-body{
-    background-color: #7159c1;
-    color: $text-color;
-}
-
-/*Encadeamento*/
-.container {
-    @include box-shadow(rgba(0,0,0,0.6));
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    $text-color: blue;
-    p {
-        @include box-shadow(rgba(0,0,0,0.6));
-        background-color: gray;
-        height: 100px;
-        width: 100px;
-        color: $text-color;
-        @include text-effect(alert);
-    }
+@each $color in blue, red, yellow {
+    .#{$color}-text { color: $color; }
 }
