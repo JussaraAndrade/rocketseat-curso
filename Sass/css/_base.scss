@@ -1,0 +1,11 @@
+/* 
+ _base.scss - "_" significa que tá pedindo para o Sass não compilar,
+ só será compilado se importar dentro do main.scss
+*/
+
+$text-color: orange;
+
+body{
+    background-color: #7159c1;
+    color: $text-color;
+}
