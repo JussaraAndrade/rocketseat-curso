@@ -1,17 +1,12 @@
-// @for $i from 1 through 5 {
-//     .text-#{$i} {
-//         font-size: 15px * $i
-//     }
-// }
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-// @for $i from 1 to 5 {
-//     .text-#{$i}{
-//         font-size: 15px * $i
-//     }
-// }
-
-//$colors: (blue, red, yellow);
-
-@each $color in blue, red, yellow {
-    .#{$color}-text { color: $color; }
+body{
+    @extend .flex;
+    flex-direction: column;
+    align-items: initial;
+    height: 100%;
 }
