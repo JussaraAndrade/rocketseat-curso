@@ -1,12 +1,9 @@
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+p{
+    color: red;
+    cursor: pointer;
+
+    &:hover{
+        color: blue;
+    }
 }
 
-body{
-    @extend .flex;
-    flex-direction: column;
-    align-items: initial;
-    height: 100%;
-}
