@@ -1,5 +1,15 @@
+@charset "UTF-8";
+/* 
+ _base.scss - "_" significa que tá pedindo para o Sass não compilar,
+ só será compilado se importar dentro do main.scss
+*/
 body {
   background-color: #7159c1;
   color: orange;
+}
+
+/*Encadeamento*/
+.container p {
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */
