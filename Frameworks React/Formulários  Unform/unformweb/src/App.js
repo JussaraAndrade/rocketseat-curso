@@ -2,52 +2,69 @@ import './App.css';
 
 import { Scope } from '@unform/core';
 import { Form } from '@unform/web';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import * as Yup from 'yup';
 
 import Input from './components/Form/Input';
 
-const initialData = {
-  email: "diego@rocketseat.com.br",
-  address: {
-    city: 'Rio do Sul'
-  }
-};
-
-// const user = {
-//   name: 'Diego',
-//   address: {
-//     street: 'Rua teste',
-//     number: '123',
-//   }
-// }
 
 function App() {
   const formRef = useRef(null);
 
-  function handleSubmit(data, { reset }) {
-    if(data.name == ""){
-     //formRef.current.setFieldError('name', 'O nome é obrigatório')
-     //formRef.current.setFieldError('address.city', 'A cidade é obrigatório')
+  async function handleSubmit(data, { reset }) {
+    try {
+      const schema = Yup.object().shape({
+        name: Yup.string().required("O nome é obrigatório"),
+        email: Yup.string()
+          .email("Digite  um e-mail válido")
+          .required("O e-mail é obrigatório"),
+        address: Yup.object().shape({
+          city: Yup.string()
+            .min(3, "No mínimo 3 caracteres")
+            .required("A cidade é obrigatporia"),
+        }),
+      });
 
-     formRef.current.setErrors({
-        name: 'O nome é obrigatório',
-        address: {
-          city: 'A cidade é obrigatória'
-        }
-     });
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      console.log(data);
+      formRef.current.setErrors({});
+
+      reset();
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+       const errorMessages = {};
+
+       err.inner.forEach(error => {
+        errorMessages[error.path] = error.message;
+       })
+
+       formRef.current.setErrors(errorMessages);
+      }
     }
-    console.log(data);
-    
-    reset();
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      formRef.current.setData({
+        name: 'Diego Fernandes',
+        email: 'diego@rocketseat.com.br',
+        address: {
+          city: 'Rio do Sul'
+        }
+      })
+    }, 2000);
+  }, []);
 
   return (
     <div className="App">
       <h1>oi</h1>
 
-      <Form ref={formRef} initialData={initialData} onSubmit={handleSubmit}>
+      <Form ref={formRef}  onSubmit={handleSubmit}>
         <Input name="name" />
-        <Input type="email" name="email" />
+        <Input name="email" />
 
         <Scope path="address">
           <Input name="street" />
