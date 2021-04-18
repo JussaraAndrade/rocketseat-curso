@@ -1,3 +1,5 @@
+import 'react-circular-progressbar/dist/styles.css';
+
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle `
