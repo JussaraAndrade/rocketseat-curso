@@ -18,6 +18,20 @@ let ValidateField = (field) => {
         return foundError;
     }
 
+    let customMessage = (typeError) => {
+        const messages = {
+            text: {
+                valueMissing: 'Por favor, preencha este campo'
+            },
+            email: {
+                valueMissing: 'Email é obrigatório',
+                typeMismatch: 'Por favor, preencha um email válido'
+            }
+        }
+
+        return messages[field.type][typeError] 
+    }
+
     let setCustomMessage = (message) => {
         const spanError = field.parentNode.querySelector('span.error')
         if(message) {
@@ -27,15 +41,18 @@ let ValidateField = (field) => {
             spanError.classList.remove('active')
             spanError.innerHTML = ''
         }
-
-        
     }
 
     return () => {
-    
-        if(verifyErrors()) {
-            setCustomMessage("Campo Obrigatório")
+        const error = verifyErrors()
+        
+        if(error) {
+            const message = customMessage(error)
+
+            field.style.borderColor = 'red'
+            setCustomMessage(message)
        } else {
+            field.style.borderColor = 'green'
             setCustomMessage()
        }
     }
@@ -47,12 +64,11 @@ let customValidation = (event) => {
     const validation = ValidateField(field)
 
     validation()
-    
 }
 
 // para cada um field adicione o evento 
 for( field of fields ) {
-    field.addEventListener("invalid", event => {
+    field.addEventListener('invalid', event => {
         // eliminar o bubble
         event.preventDefault()
         
@@ -61,20 +77,6 @@ for( field of fields ) {
     // blur; perde o focus
     field.addEventListener('blur', customValidation)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
